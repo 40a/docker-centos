@@ -22,3 +22,10 @@ RUN yum -y install git -y \
 
 RUN yum -y install ansible -y \
     && yum clean all
+
+# Configure Ansible to run locally by default
+
+RUN echo '[local]' > /etc/ansible/hosts \
+    && echo 'localhost' >> /etc/ansible/hosts \
+    && echo '[defaults]' > .ansible.cfg \
+    && echo 'transport = local' >> .ansible.cfg
