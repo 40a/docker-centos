@@ -5,6 +5,8 @@ This base CentOS Docker image is used by the majority of applications provisione
 * CentOS minor version tags
 * EPEL repository is enabled
 * Supervisor is installed
+* Ansible is installed
+* Git is installed
 
 # How to use
 
