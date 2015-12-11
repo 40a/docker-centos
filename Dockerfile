@@ -13,7 +13,6 @@ RUN echo "Removing requiretty" && \
     echo "Complete!"
 
 # Configure Ansible to run locally by default
-
 RUN echo '[local]' > /etc/ansible/hosts && \
     echo 'localhost' >> /etc/ansible/hosts && \
     echo '[defaults]' > .ansible.cfg && \
