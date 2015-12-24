@@ -1,6 +1,8 @@
 FROM centos:7
 
-RUN yum -y install epel-release && \
+RUN yum -y install http://pkg.inclusivedesign.ca/centos/7/x86_64/Packages/idi-release-1.0-0.noarch.rpm && \
+    rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-IDI && \
+    yum -y install epel-release && \
     yum -y install ansible git sudo supervisor && \
     yum clean all
 
